@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<!-- Bootstrap -->
+<link href="../static/plugins/bootstrap/css/bootstrap.min.css"
+	th:href="@{plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet"
+	media="screen" />
+<!-- Font awesome -->
+<link href="../static/plugins/fontawesome/css/font-awesome.min.css"
+	th:href="@{/plugins/fontawesome/css/font-awesome.min.css}"
+	rel="stylesheet" media="screen" />
+<!-- Custom styles -->
+<link href="../static/css/app.css" th:href="@{/css/app.css}"
+	rel='stylesheet' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../static/js/jquery-2.2.4.min.js"
+	th:src="@{js/jquery-2.2.4.min.js}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../static/plugins/bootstrap/js/bootstrap.min.js"
+	th:src="@{plugins/bootstrap/js/bootstrap.min.js}"></script>
+<title>Portal Error</title>
+</head>
+<body>
+	<div id="mainWrapper">
+		<div class="login-container">
+			<div class="login-card">
+				<div class="login-form">
+					<h3 th:inline="text">You are not authorized to access this
+						page.</h3>
+					<form th:action="@{/logout}" method="post" class="form-horizontal">
+						<div class="form-actions">
+							<input type="submit" class="btn btn-block btn-primary"
+								value="Sign Out" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
